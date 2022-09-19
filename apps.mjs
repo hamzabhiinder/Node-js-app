@@ -4,7 +4,8 @@ const port = process.env.port ||3000
 
 app.get('/', (req, res) => {
     console.log('Some request are action',req.ip)
-  res.send('Hello my name is Ameer Hamza Here')
+    console.log('changes')
+  res.send('Hello my name is Ameer Hamza Here COmputer')
 })
 
 app.listen(port, () => {
