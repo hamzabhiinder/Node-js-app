@@ -41,10 +41,10 @@
    
    <script>
           
-
+      let api="https://drab-tick-scarf.cyclic.app/";
     function postTodo() {
         let todoText = document.querySelector("#todo").value
-        axios.post(`http://localhost:3000/todo`, {
+        axios.post(`${api}todo`, {
             text: todoText
         }).then(function (response) { 
             console.log(response.data)
@@ -62,7 +62,7 @@
    
     
     function getAllTodos() {
-        axios.get(`http://localhost:3000/todos`)
+        axios.get(`${api}todos`)
             .then(function (response) {
                 console.log(response.data);
 
@@ -85,7 +85,7 @@ getAllTodos()
 
   function getDelete() {
     let todoText = document.querySelector("#todo").value
-        axios.get(`http://localhost:3000/del`).then(function (response) { 
+        axios.get(`${api}del`).then(function (response) { 
             console.log(response.data)
             document.querySelector("#result").innerHTML = ""
 
